@@ -26,12 +26,14 @@
         <form name="form1">
         <select class="form-control" name="select2" id="browsers" onchange="fifa()">
           <option value="A"></option>
-          <option value="B">Maintenance de bassin</option>
-          <option value="C">Changement de main</option>
-          <option value="D">Réparation de bassin </option>
-          <option value="E">Installation complète </option>
           <option value="F">Appel de service </option>
-          <option value="G">Maintenance complète</option>
+          <option value="E">Installation complète </option>
+          <option value="D">Réparation de bassin </option>
+          <option value="H"></option>
+          <option value="G">Maintenance complète (Main + bassin)</option>
+          <option value="C">Changement de main</option>
+          <option value="B">Maintenance de bassin</option>
+          <option value="I">Maintenance de backbar</option>
       </select>
       </div>
 
@@ -58,6 +60,8 @@
             frm.text1.value = "Travail : Appel de service \n\nProblème : \nDiagnostique : \nSolution apportée : \n\nPièces utilisées : \nBrasserie et marque de bière (utiliser la fiche de sortes de bières) :"
         else if (abc === "G") 
             frm.text1.value = "Travail : Maintenance complète\n\n**Bassin :**\nConcentration de glycol avant (°C): \nConcentration de glycol après (°C): \nTemp. du bassin :\nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) :\nQté. De glycol utilisé :\nQté. Dumper coupling utilisé :\nIsolation de pompe en bon état ? :\nPompe en bon état ? :\nMoteur en bon état ? :\nAutre :\nBrasserie et marque de bière (utiliser la fiche de sortes de bières) :\nNuméro de série :\nModèle de bassin :\n\n**Changement de main/jumper :**\nQté de main fait : \nQté de jumper fait : \nQté de tuyau 3/8’’ utilisé : \nBrasserie et marque de bière (utiliser la fiche de sortes de bières) :\nQté de fob nettoyé :\nAutre :";
+        else if (abc === "I") 
+        frm.text1.value = "Travail : Maintenance de backbar\n\nTempérature du backbar :  \nQté de main fait :  \nQté de tuyau 3/8’’ utilisé : \nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) :\n\nBrasserie et marque de bière (utiliser la fiche de sortes de bières) :\nNuméro de série du backbar:\nAutre :";
         else 
             frm.text1.value =""
     }
