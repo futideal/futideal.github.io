@@ -36,6 +36,7 @@
           <option value="D">Changement de main</option>
           <option value="B">Maintenance de bassin</option>
           <option value="I">Maintenance de backbar</option>
+          <option value="K">Planification de Maintenance</option>
       </select>
       </div>
 
@@ -69,6 +70,10 @@
         
         else if (abc === "J") 
         frm.text1.value = "Nb de lignes nettoyées et passées à l’air par brasseur (ex : 2 lignes labatt, 3 lignes molson, etc.): \nNb de fobs nettoyés :\nTest de fuite de gaz :\n\nVérification de l’état du CWB\n\nTempérature du thermostat :\nDensité du glycol :\nSouffler radiateur :\nIsolation de pompe :\nDumper coupling kit :\nPompe/moteur :\nCollant maintenance :\nNuméro de série :\nNuméro de modèle :\n\nVérification de l’état du BACK BAR\n\nTempérature dans le frigo :\nPompe de circulation fonctionnelle :\nEau dans le réservoir :\nSouffler radiateur :\nNuméro de série :\nNuméro de modèle :\n";
+        
+        else if (abc === "K") 
+        frm.text1.value = "Brasseur 1 (nombre de lignes) : \nBrasseur 2 (nombre de lignes) : \nBrasseur 3 (nombre de lignes) : \nCombien de CWB sur place à vérifier ? : \nNuméros de séries ? \nQuantité de glycol nécessaire estimé ? : \nCombien de dumpers à remplacer estimés ? : \nCombien de radiateurs à souffler ? : \nCWB sur le dessus de la chambre froide ? : \nHeure d'ouverture du client : \nJour de la semaine pour passer : \n";
+        
         
         
         else 
