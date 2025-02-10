@@ -1,88 +1,167 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
-        <title>Template Fût Idéal</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <title>Template Fût Idéal</title>
 
-        <style>
-        .alert {
-            display:none;
-        }
-        </style>
-
-
-      </head>
-
-
-<body>
-    <b><p class="m-3">Sélectionner un type de service:</p></b>
+    <style>
+      .alert {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
     <div class="m-3">
-        <form name="form1">
+      <b>
+        <p>Sélectionner un type de service :</p>
+      </b>
+      <form name="form1">
         <select class="form-control" name="select2" id="browsers" onchange="fifa()">
-          <option value="A"></option>
-          <option value="G">Appel de service </option>
-          <option value="C">Fermeture de saison </option>
-          <option value="J">Ouverture de saison </option>
-          <option value="F">Installation complète </option>
-          <option value="E">Réparation de bassin </option>
-          <option value="H"></option>
-          <option value="H">Maintenance complète (Main + bassin)</option>
-          <option value="D">Changement de main</option>
+          <option value="">--Sélectionner--</option>
+          <option value="G">Appel de service</option>
+          <option value="C">Fermeture de saison</option>
+          <option value="J">Ouverture de saison</option>
+          <option value="F">Installation complète</option>
+          <option value="H">Maintenance complète (Mains et bassin)</option>
           <option value="B">Maintenance de bassin</option>
           <option value="I">Maintenance de backbar</option>
-          <option value="K">Planification de Maintenance</option>
-      </select>
-      </div>
+          <option value="L">Maintenance de liqueur</option>
+        </select>
 
-<textarea class="m-3" name="text1" id="copy" rows="12" cols="30" onclick="this.focus();this.select()" readonly="readonly"></textarea>
-<div class="m-3"> <button type="button" class="btn btn-primary btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#copy">Copier le texte</button>
-</form>
+        <textarea
+          class="m-3"
+          name="text1"
+          id="copy"
+          rows="12"
+          cols="30"
+          onclick="this.focus();this.select()"
+          readonly="readonly"
+        ></textarea>
 
-</body>
+        <div class="m-3">
+          <button
+            type="button"
+            class="btn btn-primary btn-clipboard"
+            data-clipboard-action="copy"
+            data-clipboard-target="#copy"
+          >
+            Copier le texte
+          </button>
+        </div>
+      </form>
+    </div>
 
-<script type="text/javascript">
-    function fifa()
-    {
+    <script type="text/javascript">
+      function fifa() {
         var frm = document.forms[0];
-        var abc = frm.browsers.value;
-        if (abc === "B")
-            frm.text1.value = "Concentration de glycol avant (°C): \nConcentration de glycol après (°C): \nTemp. du bassin :\nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) :\nQté. De glycol utilisé :\nQté. Dumper coupling utilisé :\nIsolation de pompe en bon état ? :\nPompe en bon état ? :\nMoteur en bon état ? :\nAutre :\nBrasserie et marque de bière (utiliser la fiche de sortes de bières) :\nNuméro de série :\nModèle de bassin :\n Avez-vous apposé l'autocollant de maintenance sur le bassin ?";
-        else if (abc === "C")
-            frm.text1.value = "Nb de lignes nettoyées et passées à l’air par brasseur (ex : 2 lignes labatt, 3 lignes molson, etc.): \nNb de fobs nettoyés :\nAccoupleur accroché ou déposé dans un contenant :\nFermer la bonbonne de gaz :\nVider et rincer la bouteille pour les fobs :\nÉquipements chauffés :\n\nVérification de l’état du CWB\nTempérature du thermostat :\nDensité du glycol :\nSouffler radiateur :\nIsolation de pompe :\nDumper coupling kit :\nPompe/moteur :";
-        else if (abc === "D")
-            frm.text1.value = "Qté de main fait : \nQté de jumper fait : \nQté de tuyau 3/8’’ utilisé : \nBrasserie et marque de bière (utiliser la fiche de sortes de bières) :\nAutre : ";
-        else if (abc === "E")
-            frm.text1.value = "Modèle bassin défect. : \n# série bassin défect. : \nDiagnostique : \nPièces utilisées : \nEst-ce que le bassin est réparé ? :\nSi le bassin n'est pas réparé (retour en atelier), est-ce que les pièces utilisées sont toujours sur le bassin? : \nBrasserie et marque de bière (utiliser la fiche de sortes de bières) :";
-        else if (abc === "F") 
-            frm.text1.value = "Installation conforme en tout point au BT (oui/non) : \nDifférence avec le BT : \nTest de gaz : \nTest avec étanchéité des lignes : \n\nPièces non-utilisées retournées à l'entrepôt: \nPièces non-utilisées conservées dans votre inventaire (aviser aussi appro@futideal.com): \nPièces utilisées en surplus : \nÉquipement désinstallé : \nContact sur place lors de l’installation : \n\nPerçage de bois/gypse : \nPerçage de bois/gypse mêche : \nPerçage de métal : \nPerçage de métal mêche : \nPerçage de stainless : \nPerçage de stainless mêche : \nPerçage de marbre/quartz/béton : \nPerçage de marbre/quartz/béton mêche : \n\nFrais de stationnement : \nAutres frais (divers): \n";
-        else if (abc === "G") 
-            frm.text1.value = "Problème : \nDiagnostique : \nSolution apportée : \n\nPièces utilisées : \nBrasserie et marque de bière (utiliser la fiche de sortes de bières) :"
-        else if (abc === "H") 
-            frm.text1.value = "**Bassin :**\nConcentration de glycol avant (°C): \nConcentration de glycol après (°C): \nTemp. du bassin :\nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) :\nQté. De glycol utilisé :\nQté. Dumper coupling utilisé :\nIsolation de pompe en bon état ? :\nPompe en bon état ? :\nMoteur en bon état ? :\nAvez-vous apposé l'autocollant de maintenance sur le bassin ?\nAutre :\nBrasserie et marque de bière (utiliser la fiche de sortes de bières) :\nNuméro de série :\nModèle de bassin :\n\n**Changement de main/jumper :**\nQté de main fait : \nQté de jumper fait : \nQté de tuyau 3/8’’ utilisé : \nBrasserie et marque de bière (utiliser la fiche de sortes de bières) :\nQté de fob nettoyé :\nAutre :";
-        else if (abc === "I") 
-        frm.text1.value = "Température du backbar :  \nQté de main fait :  \nQté de tuyau 3/16’’ utilisé : \nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) :\n\nBrasserie et marque de bière (utiliser la fiche de sortes de bières) :\nNuméro de série du backbar:\nAutre :";
-        
-        else if (abc === "J") 
-        frm.text1.value = "Nb de lignes nettoyées et passées à l’air par brasseur (ex : 2 lignes labatt, 3 lignes molson, etc.): \nNb de fobs nettoyés :\nTest de fuite de gaz :\n\nVérification de l’état du CWB\n\nConcentration de glycol avant (°C): \nConcentration de glycol après (°C): \nTemp. du bassin :\nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) :\nQté. De glycol utilisé :\nQté. Dumper coupling utilisé :\nIsolation de pompe en bon état ? :\nPompe en bon état ? :\nMoteur en bon état ? :\nAutre :\nBrasserie et marque de bière (utiliser la fiche de sortes de bières) :\nNuméro de série :\nModèle de bassin :\nAvez-vous apposé l'autocollant de maintenance sur le bassin ?\n\nVérification de l’état du BACK BAR\n\nTempérature dans le frigo :\nPompe de circulation fonctionnelle :\nEau dans le réservoir :\nSouffler radiateur :\nNuméro de série :\nNuméro de modèle :\n";
-        
-        else if (abc === "K") 
-        frm.text1.value = "Brasseur 1 (nombre de lignes) : \nBrasseur 2 (nombre de lignes) : \nBrasseur 3 (nombre de lignes) : \nCombien de CWB sur place à vérifier ? : \nNuméros de séries ? \nQuantité de glycol nécessaire estimé ? : \nCombien de dumpers à remplacer estimés ? : \nCombien de radiateurs à souffler ? : \nCWB sur le dessus de la chambre froide ? : \nHeure d'ouverture du client : \nJour de la semaine pour passer : \n";
-        
-        
-        
-        else 
-            frm.text1.value =""
-    }
+        var abc = frm.select2.value;
+
+        if (abc === "G") {
+          // Appel de service
+          frm.text1.value =
+            "Diagnostic : \nSolution apportée : \nPièces utilisées : \nBrasserie et marque de bière :";
+        } else if (abc === "C") {
+          // Fermeture de saison
+          frm.text1.value =
+            "Nb de lignes nettoyées et passées à l’air par brasserie : \nNb de fobs nettoyés/brossés : \nAccoupleur accroché ou déposé dans un contenant : \nFermer la bonbonne de gaz : \nVider et rincer la bouteille pour les fobs : \nÉquipement dans un bâtiment chauffé : \n\nVérification de l’état du CWB : \nTempérature du thermostat : \nDensité du glycol : \nSouffler radiateur : \nÉtat de l'isolation de pompe/circulation : \nÉtat du dumper coupling kit : \nÉtat de la pompe/moteur :";
+        } else if (abc === "J") {
+          // Ouverture de saison
+          frm.text1.value =
+            "Nb de lignes nettoyées et passées à l’air par brasseur : \nNb de fobs nettoyés/brossés : \nTest de fuite de gaz : \n\nVérification de l’état du CWB : \nConcentration de glycol avant (°C): \nConcentration de glycol après (°C): \nTemp. du bassin : \nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \nQté. de glycol utilisé en Litres : \nQté. Dumper coupling utilisé : \nIsolation de pompe en bon état ? : \nPompe en bon état ? : \nMoteur en bon état ? : \nAutre : \nBrasserie et marque de bière : \nNuméro de série : \nModèle de bassin : \nAvez-vous apposé l'autocollant de maintenance sur le bassin ? \n\nVérification de l’état du BACK BAR : \nTempérature dans le frigo : \nPompe de circulation fonctionnelle : \nEau dans le réservoir : \nSouffler radiateur : \nNuméro de série : \nNuméro de modèle :";
+        } else if (abc === "F") {
+          // Installation complète
+          frm.text1.value =
+            "Différence avec le RDV : \nTest de gaz : \nTest avec étanchéité des lignes : \nPièces non-utilisées DOIVENT retourner à l'entrepôt : \nPièces utilisées en surplus : \nÉquipement désinstallé : \nContact sur place lors de l’installation : \n\nPerçage de bois/gypse : \nPerçage de bois/gypse mêche : \nPerçage de céramique : \nPerçage de métal : \nPerçage de métal mêche : \nPerçage de stainless : \nPerçage de stainless mêche : \nPerçage de marbre/quartz/béton : \nPerçage de marbre/quartz/béton mêche : \nFrais de stationnement : \nAutres frais (divers) : \nSortes de bières :";
+        } else if (abc === "H") {
+          // Maintenance complète (Mains et bassin)
+          frm.text1.value =
+            "MAINTENANCE COMPLETE (Mains et bassin)\n\n" +
+            "**Bassin :**\n" +
+            "Numéro de série : \n" +
+            "Modèle de bassin : \n" +
+            "Concentration de glycol avant (°C) : \n" +
+            "Concentration de glycol après (°C) : \n" +
+            "Temp. du bassin sur le thermostat : \n" +
+            "Temp. du bassin avec thermomètre : \n" +
+            "Radiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \n" +
+            "Qté. de glycol utilisé en Litres : \n" +
+            "Qté. dumper coupling utilisé : \n" +
+            "Isolation de pompe en bon état ? : \n" +
+            "Pompe en bon état ? : \n" +
+            "Moteur en bon état ? : \n" +
+            "Avez-vous apposé l'autocollant de maintenance sur le bassin ? : \n" +
+            "Autre : \n" +
+            "Sortes de bières :\n\n" +
+            "**Changement de main/jumper :**\n" +
+            "Qté de main fait : \n" +
+            "Qté de jumper fait : \n" +
+            "Qté de tuyau 3/8'' utilisé : \n" +
+            "Qté de tuyau de 5/16'' utilisé : \n" +
+            "Brasserie et marque de bière : \n" +
+            "Qté de fob nettoyé : \n" +
+            "Autre :";
+        } else if (abc === "B") {
+          // Maintenance de bassin
+          frm.text1.value =
+            "Maintenance de bassin \n" +
+            "Numéro de série : \n" +
+            "Modèle de bassin : \n" +
+            "Concentration de glycol avant (°C) : \n" +
+            "Concentration de glycol après (°C) : \n" +
+            "Temp. du bassin sur le thermostat : \n" +
+            "Temp. du bassin avec thermomètre : \n" +
+            "Radiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \n" +
+            "Qté. de glycol utilisé en Litres : \n" +
+            "Qté. dumper coupling utilisé : \n" +
+            "Isolation de pompe en bon état ? : \n" +
+            "Pompe en bon état ? : \n" +
+            "Moteur en bon état ? : \n" +
+            "Avez-vous apposé l'autocollant de maintenance sur le bassin ? : \n" +
+            "Autre : \n" +
+            "Sortes de bières :";
+        } else if (abc === "I") {
+          // Maintenance de backbar
+          frm.text1.value =
+            "Maintenance de backbar \n" +
+            "Numéro de série du backbar : \n" +
+            "Température du backbar : \n" +
+            "Qté de main fait : \n" +
+            "Qté de tuyau 3/16'' utilisé : \n" +
+            "Radiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \n" +
+            "État du drain de l'évaporateur : \n" +
+            "Brasserie et marque de bière : \n" +
+            "Autre :";
+        } else if (abc === "L") {
+          // Maintenance de liqueur
+          frm.text1.value =
+            "Maintenance de liqueur \n" +
+            "Vérification des brix : \n" +
+            "Qté de tuyau 3/8'' utilisé : \n" +
+            "Nombre de lignes nettoyés : \n" +
+            "Nettoyage du gun : \n" +
+            "Vérification du carbonateur : \n" +
+            "Sortes de liqueurs : \n" +
+            "Photo du rack à liqueur, gun et support : \n" +
+            "Autres pièces utilisées :";
+        } else {
+          frm.text1.value = "";
+        }
+      }
     </script>
 
-<script>
-new ClipboardJS('.btn');
-</script>
-
+    <script>
+      new ClipboardJS('.btn-clipboard');
+    </script>
+  </body>
 </html>
