@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -14,7 +12,6 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
     <title>Template Fût Idéal</title>
-
     <style>
       .alert {
         display: none;
@@ -37,13 +34,14 @@
           <option value="B">Maintenance de bassin</option>
           <option value="I">Maintenance de backbar</option>
           <option value="L">Maintenance de liqueur</option>
+          <option value="O">Ouverture de backbar</option> <!-- Nouvelle option ajoutée -->
         </select>
 
         <textarea
           class="m-3"
           name="text1"
           id="copy"
-          rows="12"
+          rows="16"
           cols="30"
           onclick="this.focus();this.select()"
           readonly="readonly"
@@ -68,23 +66,18 @@
         var abc = frm.select2.value;
 
         if (abc === "G") {
-          // Appel de service"
           frm.text1.value =
             "Diagnostic : \nSolution apportée : \nPièces utilisées : \nPièces ramenées: \nBrasserie et marque de bière :";
         } else if (abc === "C") {
-          // Fermeture de saison
           frm.text1.value =
             "Nb de lignes nettoyées et passées à l’air par brasserie : \nNb de fobs nettoyés/brossés : \nAccoupleur accroché ou déposé dans un contenant : \nFermer la bonbonne de gaz : \nVider et rincer la bouteille pour les fobs : \nÉquipement dans un bâtiment chauffé : \n\nVérification de l’état du CWB : \nCuve vidée et nettoyée : \nTempérature du thermostat : \nDensité du glycol : \nSouffler radiateur : \nÉtat de l'isolation de pompe/circulation : \nÉtat du dumper coupling kit : \nÉtat de la pompe/moteur :";
         } else if (abc === "J") {
-          // Ouverture de saison
           frm.text1.value =
             "Nb de lignes nettoyées et passées à l’air par brasseur : \nNb de fobs nettoyés/brossés : \nTest de fuite de gaz : \n\nVérification de l’état du CWB : \nCuve vidée et nettoyée : \nConcentration de glycol avant (°C): \nConcentration de glycol après (°C): \nTemp. du bassin : \nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \nQté. de glycol utilisé en Litres : \nQté. Dumper coupling utilisé : \nIsolation de pompe en bon état ? : \nPompe en bon état ? : \nMoteur en bon état ? : \nAutre : \nBrasserie et marque de bière : \nNuméro de série : \nModèle de bassin : \nAvez-vous apposé l'autocollant de maintenance sur le bassin ? \n\nVérification de l’état du BACK BAR : \nTempérature dans le frigo : \nPompe de circulation fonctionnelle : \nEau dans le réservoir : \nSouffler radiateur : \nNuméro de série : \nNuméro de modèle :";
         } else if (abc === "F") {
-          // Installation complète
           frm.text1.value =
             "Différence avec le RDV : \nTest de gaz : \nTest avec étanchéité des lignes : \nPièces non-utilisées DOIVENT retourner à l'entrepôt : \nPièces utilisées en surplus : \nÉquipement désinstallé : \nContact sur place lors de l’installation : \n\nPerçage de bois/gypse : \nPerçage de bois/gypse mêche : \nPerçage de céramique : \nPerçage de métal : \nPerçage de métal mêche : \nPerçage de stainless : \nPerçage de stainless mêche : \nPerçage de marbre/quartz/béton : \nPerçage de marbre/quartz/béton mêche : \nFrais de stationnement : \nAutres frais (divers) : \nSortes de bières :";
         } else if (abc === "H") {
-          // Maintenance complète (Mains et bassin)
           frm.text1.value =
             "MAINTENANCE COMPLETE (Mains et bassin)\n\n" +
             "**Bassin :**\n" +
@@ -112,7 +105,6 @@
             "Qté de fob nettoyé : \n" +
             "Autre :";
         } else if (abc === "B") {
-          // Maintenance de bassin
           frm.text1.value =
             "Maintenance de bassin \n" +
             "Numéro de série : \n" +
@@ -131,7 +123,6 @@
             "Autre : \n" +
             "Sortes de bières :";
         } else if (abc === "I") {
-          // Maintenance de backbar
           frm.text1.value =
             "Maintenance de backbar \n" +
             "Numéro de série du backbar : \n" +
@@ -143,7 +134,6 @@
             "Brasserie et marque de bière : \n" +
             "Autre :";
         } else if (abc === "L") {
-          // Maintenance de liqueur
           frm.text1.value =
             "Maintenance de liqueur \n" +
             "Vérification des brix : \n" +
@@ -154,6 +144,20 @@
             "Sortes de liqueurs : \n" +
             "Photo du rack à liqueur, gun et support : \n" +
             "Autres pièces utilisées :";
+        } else if (abc === "O") {
+          // Nouvelle option: Ouverture de backbar
+          frm.text1.value =
+            "Template backbar ouverture :\n\n" +
+            "# lignes lavées : \n" +
+            "# accoupleurs lavés : \n" +
+            "# fobs lavés / brossés : \n" +
+            "Ouvrir gaz et test de fuite : oui / non\n" +
+            "# chantepleures lavées : \n" +
+            "Démarrer compresseur et circulation\n" +
+            "Nettoyer le radiateur : Oui / non\n" +
+            "Température de backbar : \n" +
+            "# série Backbar et modèle : \n" +
+            "Pièces utilisées : ";
         } else {
           frm.text1.value = "";
         }
