@@ -34,7 +34,9 @@
           <option value="B">Maintenance de bassin</option>
           <option value="I">Maintenance de backbar</option>
           <option value="L">Maintenance de liqueur</option>
-          <option value="O">Ouverture de backbar</option> <!-- Nouvelle option ajoutée -->
+          <option value="O">Ouverture de backbar</option>
+          <option value="V">Template visite chambre froide</option>
+          <option value="W">Template visite back bar</option> <!-- Nouvelle option ajoutée -->
         </select>
 
         <textarea
@@ -67,16 +69,16 @@
 
         if (abc === "G") {
           frm.text1.value =
-            "Diagnostic : \nSolution apportée : \nPièces utilisées : \nPièces ramenées: \nBrasserie et marque de bière :";
+            "Diagnostic : \nSolution apportée : \nPièces utilisées : \nPièces ramenées: \nBrasserie et marque de bière :";
         } else if (abc === "C") {
           frm.text1.value =
-            "Nb de lignes nettoyées et passées à l’air par brasserie : \nNb de fobs nettoyés/brossés : \nAccoupleur accroché ou déposé dans un contenant : \nFermer la bonbonne de gaz : \nVider et rincer la bouteille pour les fobs : \nÉquipement dans un bâtiment chauffé : \n\nVérification de l’état du CWB : \nCuve vidée et nettoyée : \nTempérature du thermostat : \nDensité du glycol : \nSouffler radiateur : \nÉtat de l'isolation de pompe/circulation : \nÉtat du dumper coupling kit : \nÉtat de la pompe/moteur :";
+            "Nb de lignes nettoyées et passées à l'air par brasserie : \nNb de fobs nettoyés/brossés : \nAccoupleur accroché ou déposé dans un contenant : \nFermer la bonbonne de gaz : \nVider et rincer la bouteille pour les fobs : \nÉquipement dans un bâtiment chauffé : \n\nVérification de l'état du CWB : \nCuve vidée et nettoyée : \nTempérature du thermostat : \nDensité du glycol : \nSouffler radiateur : \nÉtat de l'isolation de pompe/circulation : \nÉtat du dumper coupling kit : \nÉtat de la pompe/moteur :";
         } else if (abc === "J") {
           frm.text1.value =
-            "Nb de lignes nettoyées et passées à l’air par brasseur : \nNb de fobs nettoyés/brossés : \nTest de fuite de gaz : \n\nVérification de l’état du CWB : \nCuve vidée et nettoyée : \nConcentration de glycol avant (°C): \nConcentration de glycol après (°C): \nTemp. du bassin : \nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \nQté. de glycol utilisé en Litres : \nQté. Dumper coupling utilisé : \nIsolation de pompe en bon état ? : \nPompe en bon état ? : \nMoteur en bon état ? : \nAutre : \nBrasserie et marque de bière : \nNuméro de série : \nModèle de bassin : \nAvez-vous apposé l'autocollant de maintenance sur le bassin ? \n\nVérification de l’état du BACK BAR : \nTempérature dans le frigo : \nPompe de circulation fonctionnelle : \nEau dans le réservoir : \nSouffler radiateur : \nNuméro de série : \nNuméro de modèle :";
+            "Nb de lignes nettoyées et passées à l'air par brasseur : \nNb de fobs nettoyés/brossés : \nTest de fuite de gaz : \n\nVérification de l'état du CWB : \nCuve vidée et nettoyée : \nConcentration de glycol avant (°C): \nConcentration de glycol après (°C): \nTemp. du bassin : \nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \nQté. de glycol utilisé en Litres : \nQté. Dumper coupling utilisé : \nIsolation de pompe en bon état ? : \nPompe en bon état ? : \nMoteur en bon état ? : \nAutre : \nBrasserie et marque de bière : \nNuméro de série : \nModèle de bassin : \nAvez-vous apposé l'autocollant de maintenance sur le bassin ? \n\nVérification de l'état du BACK BAR : \nTempérature dans le frigo : \nPompe de circulation fonctionnelle : \nEau dans le réservoir : \nSouffler radiateur : \nNuméro de série : \nNuméro de modèle :";
         } else if (abc === "F") {
           frm.text1.value =
-            "Différence avec le RDV : \nTest de gaz : \nTest avec étanchéité des lignes : \nPièces non-utilisées DOIVENT retourner à l'entrepôt : \nPièces utilisées en surplus : \nÉquipement désinstallé : \nContact sur place lors de l’installation : \n\nPerçage de bois/gypse : \nPerçage de bois/gypse mêche : \nPerçage de céramique : \nPerçage de métal : \nPerçage de métal mêche : \nPerçage de stainless : \nPerçage de stainless mêche : \nPerçage de marbre/quartz/béton : \nPerçage de marbre/quartz/béton mêche : \nFrais de stationnement : \nAutres frais (divers) : \nSortes de bières :";
+            "Différence avec le RDV : \nTest de gaz : \nTest avec étanchéité des lignes : \nPièces non-utilisées DOIVENT retourner à l'entrepôt : \nPièces utilisées en surplus : \nÉquipement désinstallé : \nContact sur place lors de l'installation : \n\nPerçage de bois/gypse : \nPerçage de bois/gypse mêche : \nPerçage de céramique : \nPerçage de métal : \nPerçage de métal mêche : \nPerçage de stainless : \nPerçage de stainless mêche : \nPerçage de marbre/quartz/béton : \nPerçage de marbre/quartz/béton mêche : \nFrais de stationnement : \nAutres frais (divers) : \nSortes de bières :";
         } else if (abc === "H") {
           frm.text1.value =
             "MAINTENANCE COMPLETE (Mains et bassin)\n\n" +
@@ -145,7 +147,6 @@
             "Photo du rack à liqueur, gun et support : \n" +
             "Autres pièces utilisées :";
         } else if (abc === "O") {
-          // Nouvelle option: Ouverture de backbar
           frm.text1.value =
             "Template backbar ouverture :\n\n" +
             "# lignes lavées : \n" +
@@ -158,6 +159,53 @@
             "Température de backbar : \n" +
             "# série Backbar et modèle : \n" +
             "Pièces utilisées : ";
+        } else if (abc === "V") {
+          // Nouvelle option: Template visite chambre froide
+          frm.text1.value =
+            "TEMPLATE VISITE CHAMBRE FROIDE :\n" +
+            "**PLUSIEURS PHOTOS DOIVENT ÊTRE PRISES**\n\n" +
+            "Contact sur place lors de la visite (nom et # téléphone) : \n" +
+            "Description des travaux : \n\n" +
+            "Type de colonne (modèle/nb ligne/couleur/sortie) : \n" +
+            "Type de plateau (intégré ou non/drain/RV) : \n" +
+            "Type de colonne (modèle/nb ligne/couleur/sortie) : \n" +
+            "Type de plateau (intégré ou non/drain/RV) : \n\n" +
+            "Trunk line : \n" +
+            "Circulation : \n" +
+            "Pièces spécifiques : \n\n" +
+            "Perçage de bois/gypse : \n" +
+            "Perçage de bois/gypse mêche : \n" +
+            "Perçage de céramique : \n" +
+            "Perçage de métal : \n" +
+            "Perçage de métal mêche : \n" +
+            "Perçage de stainless : \n" +
+            "Perçage de stainless mêche : \n" +
+            "Perçage de marbre/quartz/béton : \n" +
+            "Perçage de marbre/quartz/béton mêche : \n\n" +
+            "Gaz nécessaire : ";
+        } else if (abc === "W") {
+          // Nouvelle option: Template visite back bar
+          frm.text1.value =
+            "TEMPLATE VISITE BACK BAR :\n" +
+            "**PLUSIEURS PHOTOS DOIVENT ÊTRE PRISES**\n\n" +
+            "Contact sur place lors de la visite (nom et # téléphone) : \n" +
+            "Description des travaux : \n\n" +
+            "Type de backbar : \n" +
+            "Type de colonne (modèle/nb ligne/couleur/sortie) : \n" +
+            "Type de plateau (intégré ou non/drain/RV) : \n" +
+            "Type de colonne (modèle/nb ligne/couleur/sortie) : \n" +
+            "Type de plateau (intégré ou non/drain/RV) : \n\n" +
+            "Pièces spécifiques : \n\n" +
+            "Perçage de bois/gypse : \n" +
+            "Perçage de bois/gypse mêche : \n" +
+            "Perçage de céramique : \n" +
+            "Perçage de métal : \n" +
+            "Perçage de métal mêche : \n" +
+            "Perçage de stainless : \n" +
+            "Perçage de stainless mêche : \n" +
+            "Perçage de marbre/quartz/béton : \n" +
+            "Perçage de marbre/quartz/béton mêche : \n\n" +
+            "Gaz nécessaire : ";
         } else {
           frm.text1.value = "";
         }
