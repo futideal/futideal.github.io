@@ -36,7 +36,8 @@
           <option value="L">Maintenance de liqueur</option>
           <option value="O">Ouverture de backbar</option>
           <option value="V">Template visite chambre froide</option>
-          <option value="W">Template visite back bar</option> <!-- Nouvelle option ajoutée -->
+          <option value="W">Template visite back bar</option>
+          <option value="M">McDonald's</option> <!-- Nouvelle option -->
         </select>
 
         <textarea
@@ -160,7 +161,6 @@
             "# série Backbar et modèle : \n" +
             "Pièces utilisées : ";
         } else if (abc === "V") {
-          // Nouvelle option: Template visite chambre froide
           frm.text1.value =
             "TEMPLATE VISITE CHAMBRE FROIDE :\n" +
             "**PLUSIEURS PHOTOS DOIVENT ÊTRE PRISES**\n\n" +
@@ -184,7 +184,6 @@
             "Perçage de marbre/quartz/béton mêche : \n\n" +
             "Gaz nécessaire : ";
         } else if (abc === "W") {
-          // Nouvelle option: Template visite back bar
           frm.text1.value =
             "TEMPLATE VISITE BACK BAR :\n" +
             "**PLUSIEURS PHOTOS DOIVENT ÊTRE PRISES**\n\n" +
@@ -206,6 +205,32 @@
             "Perçage de marbre/quartz/béton : \n" +
             "Perçage de marbre/quartz/béton mêche : \n\n" +
             "Gaz nécessaire : ";
+        } else if (abc === "M") {
+          // Nouvelle option: McDonald's
+          frm.text1.value =
+            "Titre: McDonald's\n\n" +
+            "IMPORTANT DE TOUT REMPLIR CHEZ LE CLIENT\n" +
+            "Nb. CO2 MK9 Detector SET installé: \n" +
+            "Nb. CO2 MK9 Sensor kit installé: \n" +
+            "Est-ce qu’il y a des capteurs au sous-sol : \n" +
+            "Système sous tension et actif : \n" +
+            "Transfo sécurisé avec attache perforée: \n" +
+            "Paramètre d’altitude ajusté : \n" +
+            "Test fonctionnel du système : \n" +
+            "Pancartes installées à la vue de tous pour contrôleur, capteurs et alarmes: \n" +
+            "Client conseillé sur utilisation du système : \n" +
+            "Document de garantie rempli, signé, remi au client et photo dans RDV : \n" +
+            "\n" +
+            "Autres détails sur l’installation pour justifier temps supplémentaire: \n" +
+            "\n" +
+            "Bonbonnes de gaz Messer/Air Liquide/Linde (prendre photo): \n" +
+            "\n" +
+            "Frais de stationnement : \n" +
+            "Autres frais (divers) : \n" +
+            "\n" +
+            "Contact sur place lors de l'installation : \n" +
+            "\n" +
+            "JOINDRE PHOTO DU CONTRÔLEUR, DES CAPTEURS, DES ALARMES, DU TRANSFO SÉCURISÉ, BONBONNE DE GAZ ET DU DOCUMENT DE GARANTIE SIGNÉ DANS VOTRE RDV.";
         } else {
           frm.text1.value = "";
         }
