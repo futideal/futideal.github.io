@@ -37,7 +37,7 @@
           <option value="O">Ouverture de backbar</option>
           <option value="V">Template visite chambre froide</option>
           <option value="W">Template visite back bar</option>
-          <option value="M">McDonald's</option> <!-- Nouvelle option -->
+          <option value="M">McDonald's</option>
         </select>
 
         <textarea
@@ -70,7 +70,14 @@
 
         if (abc === "G") {
           frm.text1.value =
-            "Diagnostic : \nSolution apportée : \nPièces utilisées : \nPièces ramenées: \nBrasserie et marque de bière :";
+            "Diagnostic : \n" +
+            "Solution apportée : \n" +
+            "Pièces utilisées : \n" +
+            "Pièces ramenées: \n" +
+            "Brasserie et marque de bière : \n" +
+            "Température frigo : \n" +
+            "Température de bière : \n" +
+            "Opéré avec quel gaz :";
         } else if (abc === "C") {
           frm.text1.value =
             "Nb de lignes nettoyées et passées à l'air par brasserie : \nNb de fobs nettoyés/brossés : \nAccoupleur accroché ou déposé dans un contenant : \nFermer la bonbonne de gaz : \nVider et rincer la bouteille pour les fobs : \nÉquipement dans un bâtiment chauffé : \n\nVérification de l'état du CWB : \nCuve vidée et nettoyée : \nTempérature du thermostat : \nDensité du glycol : \nSouffler radiateur : \nÉtat de l'isolation de pompe/circulation : \nÉtat du dumper coupling kit : \nÉtat de la pompe/moteur :";
@@ -206,7 +213,6 @@
             "Perçage de marbre/quartz/béton mêche : \n\n" +
             "Gaz nécessaire : ";
         } else if (abc === "M") {
-          // Nouvelle option: McDonald's
           frm.text1.value =
             "IMPORTANT DE TOUT REMPLIR CHEZ LE CLIENT\n" +
             "Nb. CO2 MK9 Detector SET installé: \n" +
@@ -241,3 +247,4 @@
     </script>
   </body>
 </html>
+
