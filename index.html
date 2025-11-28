@@ -1,182 +1,253 @@
-<script type="text/javascript">
-  function fifa() {
-    var frm = document.forms[0];
-    var abc = frm.select2.value;
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    if (abc === "G") {
-      frm.text1.value =
-        "Diagnostic : \n" +
-        "Solution apportée : \n" +
-        "Pièces utilisées : \n" +
-        "Pièces ramenées: \n" +
-        "Brasserie et marque de bière : \n" +
-        "Température frigo : \n" +
-        "Température de bière : \n" +
-        "Opéré avec quel gaz :";
-    } else if (abc === "C") {
-      frm.text1.value =
-        "Nb de lignes nettoyées et passées à l'air par brasserie : \nNb de fobs nettoyés/brossés : \nAccoupleur accroché ou déposé dans un contenant : \nFermer la bonbonne de gaz : \nVider et rincer la bouteille pour les fobs : \nÉquipement dans un bâtiment chauffé : \n\nVérification de l'état du CWB : \nCuve vidée et nettoyée : \nTempérature du thermostat : \nDensité du glycol : \nSouffler radiateur : \nÉtat de l'isolation de pompe/circulation : \nÉtat du dumper coupling kit : \nÉtat de la pompe/moteur :";
-    } else if (abc === "J") {
-      frm.text1.value =
-        "Nb de lignes nettoyées et passées à l'air par brasseur : \nNb de fobs nettoyés/brossés : \nTest de fuite de gaz : \n\nVérification de l'état du CWB : \nCuve vidée et nettoyée : \nConcentration de glycol avant (°C): \nConcentration de glycol après (°C): \nTemp. du bassin : \nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \nQté. de glycol utilisé en Litres : \nQté. Dumper coupling utilisé : \nIsolation de pompe en bon état ? : \nPompe en bon état ? : \nMoteur en bon état ? : \nAutre : \nBrasserie et marque de bière : \nNuméro de série : \nModèle de bassin : \nAvez-vous apposé l'autocollant de maintenance sur le bassin ? \n\nVérification de l'état du BACK BAR : \nTempérature dans le frigo : \nPompe de circulation fonctionnelle : \nEau dans le réservoir : \nSouffler radiateur : \nNuméro de série : \nNuméro de modèle :";
-    } else if (abc === "F") {
-      frm.text1.value =
-        "Différence avec le RDV : \nTest de gaz : \nTest avec étanchéité des lignes : \nPièces non-utilisées DOIVENT retourner à l'entrepôt : \nPièces utilisées en surplus : \nÉquipement désinstallé : \nContact sur place lors de l'installation : \n\nPerçage de bois/gypse : \nPerçage de bois/gypse mêche : \nPerçage de céramique : \nPerçage de métal : \nPerçage de métal mêche : \nPerçage de stainless : \nPerçage de stainless mêche : \nPerçage de marbre/quartz/béton : \nPerçage de marbre/quartz/béton mêche : \nFrais de stationnement : \nAutres frais (divers) : \nSortes de bières :";
-    } else if (abc === "H") {
-      frm.text1.value =
-        "MAINTENANCE COMPLETE (Mains et bassin)\n\n" +
-        "**Bassin :**\n" +
-        "Numéro de série : \n" +
-        "Modèle de bassin : \n" +
-        "Concentration de glycol avant (°C) : \n" +
-        "Concentration de glycol après (°C) : \n" +
-        "Temp. du bassin sur le thermostat : \n" +
-        "Temp. du bassin avec thermomètre : \n" +
-        "Radiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \n" +
-        "Qté. de glycol utilisé en Litres : \n" +
-        "Qté. dumper coupling utilisé : \n" +
-        "Isolation de pompe en bon état ? : \n" +
-        "Pompe en bon état ? : \n" +
-        "Moteur en bon état ? : \n" +
-        "Avez-vous apposé l'autocollant de maintenance sur le bassin ? : \n" +
-        "Autre : \n" +
-        "Sortes de bières :\n\n" +
-        "**Changement de main/jumper :**\n" +
-        "Qté de main fait : \n" +
-        "Qté de jumper fait : \n" +
-        "Qté de tuyau 3/8'' utilisé : \n" +
-        "Qté de tuyau de 5/16'' utilisé : \n" +
-        "Brasserie et marque de bière : \n" +
-        "Qté de fob nettoyé : \n" +
-        "Autre :";
-    } else if (abc === "B") {
-      frm.text1.value =
-        "Maintenance de bassin \n" +
-        "Numéro de série : \n" +
-        "Modèle de bassin : \n" +
-        "Concentration de glycol avant (°C) : \n" +
-        "Concentration de glycol après (°C) : \n" +
-        "Temp. du bassin sur le thermostat : \n" +
-        "Temp. du bassin avec thermomètre : \n" +
-        "Radiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \n" +
-        "Qté. de glycol utilisé en Litres : \n" +
-        "Qté. dumper coupling utilisé : \n" +
-        "Isolation de pompe en bon état ? : \n" +
-        "Pompe en bon état ? : \n" +
-        "Moteur en bon état ? : \n" +
-        "Avez-vous apposé l'autocollant de maintenance sur le bassin ? : \n" +
-        "Autre : \n" +
-        "Sortes de bières :";
-    } else if (abc === "I") {
-      frm.text1.value =
-        "Maintenance de backbar \n" +
-        "Numéro de série du backbar : \n" +
-        "Température du backbar : \n" +
-        "Qté de main fait : \n" +
-        "Qté de tuyau 3/16'' utilisé : \n" +
-        "Radiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \n" +
-        "État du drain de l'évaporateur : \n" +
-        "Brasserie et marque de bière : \n" +
-        "Autre :";
-    } else if (abc === "L") {
-      frm.text1.value =
-        "Maintenance de liqueur \n" +
-        "Vérification des brix : \n" +
-        "Qté de tuyau 3/8'' utilisé : \n" +
-        "Nombre de lignes nettoyés : \n" +
-        "Nettoyage du gun : \n" +
-        "Vérification du carbonateur : \n" +
-        "Sortes de liqueurs : \n" +
-        "Photo du rack à liqueur, gun et support : \n" +
-        "Autres pièces utilisées :";
-    } else if (abc === "O") {
-      frm.text1.value =
-        "Template backbar ouverture :\n\n" +
-        "# lignes lavées : \n" +
-        "# accoupleurs lavés : \n" +
-        "# fobs lavés / brossés : \n" +
-        "Ouvrir gaz et test de fuite : oui / non\n" +
-        "# chantepleures lavées : \n" +
-        "Démarrer compresseur et circulation\n" +
-        "Nettoyer le radiateur : Oui / non\n" +
-        "Température de backbar : \n" +
-        "# série Backbar et modèle : \n" +
-        "Pièces utilisées : ";
-    } else if (abc === "V") {
-      frm.text1.value =
-        "TEMPLATE VISITE CHAMBRE FROIDE :\n" +
-        "**PLUSIEURS PHOTOS DOIVENT ÊTRE PRISES**\n\n" +
-        "Contact sur place lors de la visite (nom et # téléphone) : \n" +
-        "Description des travaux : \n\n" +
-        "Type de colonne (modèle/nb ligne/couleur/sortie) : \n" +
-        "Type de plateau (intégré ou non/drain/RV) : \n" +
-        "Type de colonne (modèle/nb ligne/couleur/sortie) : \n" +
-        "Type de plateau (intégré ou non/drain/RV) : \n\n" +
-        "Trunk line : \n" +
-        "Circulation : \n" +
-        "Pièces spécifiques : \n\n" +
-        "Perçage de bois/gypse : \n" +
-        "Perçage de bois/gypse mêche : \n" +
-        "Perçage de céramique : \n" +
-        "Perçage de métal : \n" +
-        "Perçage de métal mêche : \n" +
-        "Perçage de stainless : \n" +
-        "Perçage de stainless mêche : \n" +
-        "Perçage de marbre/quartz/béton : \n" +
-        "Perçage de marbre/quartz/béton mêche : \n\n" +
-        "Gaz nécessaire : ";
-    } else if (abc === "W") {
-      frm.text1.value =
-        "TEMPLATE VISITE BACK BAR :\n" +
-        "**PLUSIEURS PHOTOS DOIVENT ÊTRE PRISES**\n\n" +
-        "Contact sur place lors de la visite (nom et # téléphone) : \n" +
-        "Description des travaux : \n\n" +
-        "Type de backbar : \n" +
-        "Type de colonne (modèle/nb ligne/couleur/sortie) : \n" +
-        "Type de plateau (intégré ou non/drain/RV) : \n" +
-        "Type de colonne (modèle/nb ligne/couleur/sortie) : \n" +
-        "Type de plateau (intégré ou non/drain/RV) : \n\n" +
-        "Pièces spécifiques : \n\n" +
-        "Perçage de bois/gypse : \n" +
-        "Perçage de bois/gypse mêche : \n" +
-        "Perçage de céramique : \n" +
-        "Perçage de métal : \n" +
-        "Perçage de métal mêche : \n" +
-        "Perçage de stainless : \n" +
-        "Perçage de stainless mêche : \n" +
-        "Perçage de marbre/quartz/béton : \n" +
-        "Perçage de marbre/quartz/béton mêche : \n\n" +
-        "Gaz nécessaire : ";
-    } else if (abc === "M") {
-      // >>> SECTION McDonald's MISE À JOUR <<<
-      frm.text1.value =
-        "IMPORTANT DE TOUT REMPLIR CHEZ LE CLIENT\n" +
-        "Nb. CO2 MK9 Detector SET installé: \n" +
-        "Nb. CO2 MK9 Sensor kit installé: \n" +
-        "Nb. alarme seulement installé: \n" +
-        "Est-ce qu’il y a des capteurs au sous-sol : \n" +
-        "Système sous tension et actif : \n" +
-        "Transfo sécurisé avec attache perforée: \n" +
-        "Paramètre d’altitude ajusté : \n" +
-        "Test fonctionnel du système : \n" +
-        "Pancartes installées à la vue de tous pour contrôleur, capteurs et alarmes: \n" +
-        "Client conseillé sur utilisation du système : \n" +
-        "Document de garantie rempli, signé, remi au client et photo dans RDV : \n" +
-        "\n" +
-        "Autres détails sur l’installation pour justifier temps supplémentaire: \n" +
-        "\n" +
-        "Bonbonnes de gaz Messer/Air Liquide/Linde (prendre photo): \n" +
-        "\n" +
-        "Frais de stationnement : \n" +
-        "Autres frais (divers) : \n" +
-        "\n" +
-        "Contact sur place lors de l'installation : \n" +
-        "\n" +
-        "JOINDRE PHOTO DU CONTRÔLEUR, DES CAPTEURS, DES ALARMES, DU TRANSFO SÉCURISÉ, BONBONNE DE GAZ ET DU DOCUMENT DE GARANTIE SIGNÉ DANS VOTRE RDV.";
-    } else {
-      frm.text1.value = "";
-    }
-  }
-</script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <title>Template Fût Idéal</title>
+    <style>
+      .alert {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="m-3">
+      <b>
+        <p>Sélectionner un type de service :</p>
+      </b>
+      <form name="form1">
+        <select class="form-control" name="select2" id="browsers" onchange="fifa()">
+          <option value="">--Sélectionner--</option>
+          <option value="G">Appel de service</option>
+          <option value="C">Fermeture de saison</option>
+          <option value="J">Ouverture de saison</option>
+          <option value="F">Installation complète</option>
+          <option value="H">Maintenance complète (Mains et bassin)</option>
+          <option value="B">Maintenance de bassin</option>
+          <option value="I">Maintenance de backbar</option>
+          <option value="L">Maintenance de liqueur</option>
+          <option value="O">Ouverture de backbar</option>
+          <option value="V">Template visite chambre froide</option>
+          <option value="W">Template visite back bar</option>
+          <option value="M">McDonald's</option>
+        </select>
+
+        <textarea
+          class="m-3"
+          name="text1"
+          id="copy"
+          rows="16"
+          cols="30"
+          onclick="this.focus();this.select()"
+          readonly="readonly"
+        ></textarea>
+
+        <div class="m-3">
+          <button
+            type="button"
+            class="btn btn-primary btn-clipboard"
+            data-clipboard-action="copy"
+            data-clipboard-target="#copy"
+          >
+            Copier le texte
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      function fifa() {
+        var frm = document.forms[0];
+        var abc = frm.select2.value;
+
+        if (abc === "G") {
+          frm.text1.value =
+            "Diagnostic : \n" +
+            "Solution apportée : \n" +
+            "Pièces utilisées : \n" +
+            "Pièces ramenées: \n" +
+            "Brasserie et marque de bière : \n" +
+            "Température frigo : \n" +
+            "Température de bière : \n" +
+            "Opéré avec quel gaz :";
+        } else if (abc === "C") {
+          frm.text1.value =
+            "Nb de lignes nettoyées et passées à l'air par brasserie : \nNb de fobs nettoyés/brossés : \nAccoupleur accroché ou déposé dans un contenant : \nFermer la bonbonne de gaz : \nVider et rincer la bouteille pour les fobs : \nÉquipement dans un bâtiment chauffé : \n\nVérification de l'état du CWB : \nCuve vidée et nettoyée : \nTempérature du thermostat : \nDensité du glycol : \nSouffler radiateur : \nÉtat de l'isolation de pompe/circulation : \nÉtat du dumper coupling kit : \nÉtat de la pompe/moteur :";
+        } else if (abc === "J") {
+          frm.text1.value =
+            "Nb de lignes nettoyées et passées à l'air par brasseur : \nNb de fobs nettoyés/brossés : \nTest de fuite de gaz : \n\nVérification de l'état du CWB : \nCuve vidée et nettoyée : \nConcentration de glycol avant (°C): \nConcentration de glycol après (°C): \nTemp. du bassin : \nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \nQté. de glycol utilisé en Litres : \nQté. Dumper coupling utilisé : \nIsolation de pompe en bon état ? : \nPompe en bon état ? : \nMoteur en bon état ? : \nAutre : \nBrasserie et marque de bière : \nNuméro de série : \nModèle de bassin : \nAvez-vous apposé l'autocollant de maintenance sur le bassin ? \n\nVérification de l'état du BACK BAR : \nTempérature dans le frigo : \nPompe de circulation fonctionnelle : \nEau dans le réservoir : \nSouffler radiateur : \nNuméro de série : \nNuméro de modèle :";
+        } else if (abc === "F") {
+          frm.text1.value =
+            "Différence avec le RDV : \nTest de gaz : \nTest avec étanchéité des lignes : \nPièces non-utilisées DOIVENT retourner à l'entrepôt : \nPièces utilisées en surplus : \nÉquipement désinstallé : \nContact sur place lors de l'installation : \n\nPerçage de bois/gypse : \nPerçage de bois/gypse mêche : \nPerçage de céramique : \nPerçage de métal : \nPerçage de métal mêche : \nPerçage de stainless : \nPerçage de stainless mêche : \nPerçage de marbre/quartz/béton : \nPerçage de marbre/quartz/béton mêche : \nFrais de stationnement : \nAutres frais (divers) : \nSortes de bières :";
+        } else if (abc === "H") {
+          frm.text1.value =
+            "MAINTENANCE COMPLETE (Mains et bassin)\n\n" +
+            "**Bassin :**\n" +
+            "Numéro de série : \n" +
+            "Modèle de bassin : \n" +
+            "Concentration de glycol avant (°C) : \n" +
+            "Concentration de glycol après (°C) : \n" +
+            "Temp. du bassin sur le thermostat : \n" +
+            "Temp. du bassin avec thermomètre : \n" +
+            "Radiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \n" +
+            "Qté. de glycol utilisé en Litres : \n" +
+            "Qté. dumper coupling utilisé : \n" +
+            "Isolation de pompe en bon état ? : \n" +
+            "Pompe en bon état ? : \n" +
+            "Moteur en bon état ? : \n" +
+            "Avez-vous apposé l'autocollant de maintenance sur le bassin ? : \n" +
+            "Autre : \n" +
+            "Sortes de bières :\n\n" +
+            "**Changement de main/jumper :**\n" +
+            "Qté de main fait : \n" +
+            "Qté de jumper fait : \n" +
+            "Qté de tuyau 3/8'' utilisé : \n" +
+            "Qté de tuyau de 5/16'' utilisé : \n" +
+            "Brasserie et marque de bière : \n" +
+            "Qté de fob nettoyé : \n" +
+            "Autre :";
+        } else if (abc === "B") {
+          frm.text1.value =
+            "Maintenance de bassin \n" +
+            "Numéro de série : \n" +
+            "Modèle de bassin : \n" +
+            "Concentration de glycol avant (°C) : \n" +
+            "Concentration de glycol après (°C) : \n" +
+            "Temp. du bassin sur le thermostat : \n" +
+            "Temp. du bassin avec thermomètre : \n" +
+            "Radiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \n" +
+            "Qté. de glycol utilisé en Litres : \n" +
+            "Qté. dumper coupling utilisé : \n" +
+            "Isolation de pompe en bon état ? : \n" +
+            "Pompe en bon état ? : \n" +
+            "Moteur en bon état ? : \n" +
+            "Avez-vous apposé l'autocollant de maintenance sur le bassin ? : \n" +
+            "Autre : \n" +
+            "Sortes de bières :";
+        } else if (abc === "I") {
+          frm.text1.value =
+            "Maintenance de backbar \n" +
+            "Numéro de série du backbar : \n" +
+            "Température du backbar : \n" +
+            "Qté de main fait : \n" +
+            "Qté de tuyau 3/16'' utilisé : \n" +
+            "Radiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \n" +
+            "État du drain de l'évaporateur : \n" +
+            "Brasserie et marque de bière : \n" +
+            "Autre :";
+        } else if (abc === "L") {
+          frm.text1.value =
+            "Maintenance de liqueur \n" +
+            "Vérification des brix : \n" +
+            "Qté de tuyau 3/8'' utilisé : \n" +
+            "Nombre de lignes nettoyés : \n" +
+            "Nettoyage du gun : \n" +
+            "Vérification du carbonateur : \n" +
+            "Sortes de liqueurs : \n" +
+            "Photo du rack à liqueur, gun et support : \n" +
+            "Autres pièces utilisées :";
+        } else if (abc === "O") {
+          frm.text1.value =
+            "Template backbar ouverture :\n\n" +
+            "# lignes lavées : \n" +
+            "# accoupleurs lavés : \n" +
+            "# fobs lavés / brossés : \n" +
+            "Ouvrir gaz et test de fuite : oui / non\n" +
+            "# chantepleures lavées : \n" +
+            "Démarrer compresseur et circulation\n" +
+            "Nettoyer le radiateur : Oui / non\n" +
+            "Température de backbar : \n" +
+            "# série Backbar et modèle : \n" +
+            "Pièces utilisées : ";
+        } else if (abc === "V") {
+          frm.text1.value =
+            "TEMPLATE VISITE CHAMBRE FROIDE :\n" +
+            "**PLUSIEURS PHOTOS DOIVENT ÊTRE PRISES**\n\n" +
+            "Contact sur place lors de la visite (nom et # téléphone) : \n" +
+            "Description des travaux : \n\n" +
+            "Type de colonne (modèle/nb ligne/couleur/sortie) : \n" +
+            "Type de plateau (intégré ou non/drain/RV) : \n" +
+            "Type de colonne (modèle/nb ligne/couleur/sortie) : \n" +
+            "Type de plateau (intégré ou non/drain/RV) : \n\n" +
+            "Trunk line : \n" +
+            "Circulation : \n" +
+            "Pièces spécifiques : \n\n" +
+            "Perçage de bois/gypse : \n" +
+            "Perçage de bois/gypse mêche : \n" +
+            "Perçage de céramique : \n" +
+            "Perçage de métal : \n" +
+            "Perçage de métal mêche : \n" +
+            "Perçage de stainless : \n" +
+            "Perçage de stainless mêche : \n" +
+            "Perçage de marbre/quartz/béton : \n" +
+            "Perçage de marbre/quartz/béton mêche : \n\n" +
+            "Gaz nécessaire : ";
+        } else if (abc === "W") {
+          frm.text1.value =
+            "TEMPLATE VISITE BACK BAR :\n" +
+            "**PLUSIEURS PHOTOS DOIVENT ÊTRE PRISES**\n\n" +
+            "Contact sur place lors de la visite (nom et # téléphone) : \n" +
+            "Description des travaux : \n\n" +
+            "Type de backbar : \n" +
+            "Type de colonne (modèle/nb ligne/couleur/sortie) : \n" +
+            "Type de plateau (intégré ou non/drain/RV) : \n" +
+            "Type de colonne (modèle/nb ligne/couleur/sortie) : \n" +
+            "Type de plateau (intégré ou non/drain/RV) : \n\n" +
+            "Pièces spécifiques : \n\n" +
+            "Perçage de bois/gypse : \n" +
+            "Perçage de bois/gypse mêche : \n" +
+            "Perçage de céramique : \n" +
+            "Perçage de métal : \n" +
+            "Perçage de métal mêche : \n" +
+            "Perçage de stainless : \n" +
+            "Perçage de stainless mêche : \n" +
+            "Perçage de marbre/quartz/béton : \n" +
+            "Perçage de marbre/quartz/béton mêche : \n\n" +
+            "Gaz nécessaire : ";
+        } else if (abc === "M") {
+          frm.text1.value =
+            "IMPORTANT DE TOUT REMPLIR CHEZ LE CLIENT\n" +
+            "Nb. CO2 MK9 Detector SET installé: \n" +
+            "Nb. CO2 MK9 Sensor kit installé: \n" +
+            "Nb. alarme seulement installé: \n" +
+            "Est-ce qu’il y a des capteurs au sous-sol : \n" +
+            "Système sous tension et actif : \n" +
+            "Transfo sécurisé avec attache perforée: \n" +
+            "Paramètre d’altitude ajusté : \n" +
+            "Test fonctionnel du système : \n" +
+            "Pancartes installées à la vue de tous pour contrôleur, capteurs et alarmes: \n" +
+            "Client conseillé sur utilisation du système : \n" +
+            "Document de garantie rempli, signé, remi au client et photo dans RDV : \n" +
+            "\n" +
+            "Autres détails sur l’installation pour justifier temps supplémentaire: \n" +
+            "\n" +
+            "Bonbonnes de gaz Messer/Air Liquide/Linde (prendre photo): \n" +
+            "\n" +
+            "Frais de stationnement : \n" +
+            "Autres frais (divers) : \n" +
+            "\n" +
+            "Contact sur place lors de l'installation : \n" +
+            "\n" +
+            "JOINDRE PHOTO DU CONTRÔLEUR, DES CAPTEURS, DES ALARMES, DU TRANSFO SÉCURISÉ, BONBONNE DE GAZ ET DU DOCUMENT DE GARANTIE SIGNÉ DANS VOTRE RDV.";
+        } else {
+          frm.text1.value = "";
+        }
+      }
+    </script>
+
+    <script>
+      new ClipboardJS('.btn-clipboard');
+    </script>
+  </body>
+</html>
+
 
 
