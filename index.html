@@ -38,6 +38,9 @@
           <option value="V">Template visite chambre froide</option>
           <option value="W">Template visite back bar</option>
           <option value="M">McDonald's</option>
+
+          <!-- NOUVELLE OPTION -->
+          <option value="P">Maintenance Flash cooler</option>
         </select>
 
         <textarea
@@ -251,6 +254,17 @@
             "Autres frais (divers) : \n\n" +
             "Contact sur place lors de l'installation : \n\n" +
             "JOINDRE PHOTO DU CONTRÔLEUR, DES CAPTEURS, DES ALARMES, DU TRANSFO SÉCURISÉ, BONBONNE DE GAZ ET DU DOCUMENT DE GARANTIE SIGNÉ DANS VOTRE RDV.";
+
+        <!-- NOUVEAU BLOC -->
+        } else if (abc === "P") {
+          frm.text1.value =
+            "Maintenance Flash cooler\n" +
+            "Vérifier température eau avant: \n" +
+            "Vérifier température eau après: \n" +
+            "Vérifier niveau d'eau (doit être juste au-dessous de l'overflow): \n" +
+            "S'assurer que l'eau est propre dans le flash: \n" +
+            "Vérifier si pompe à besoin de nettoyage au dessus et circule bien: \n" +
+            "Nettoyer radiateur au co2 et au besoin Nu Blast:  ";
         } else {
           frm.text1.value = "";
         }
@@ -262,6 +276,7 @@
     </script>
   </body>
 </html>
+
 
 
 
