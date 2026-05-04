@@ -38,8 +38,6 @@
           <option value="V">Template visite chambre froide</option>
           <option value="W">Template visite back bar</option>
           <option value="M">McDonald's</option>
-
-          <!-- NOUVELLE OPTION -->
           <option value="P">Maintenance Flash cooler</option>
         </select>
 
@@ -80,13 +78,14 @@
             "Brasserie et marque de bière : \n" +
             "Température frigo : \n" +
             "Température de bière : \n" +
-            "Opéré avec quel gaz :";
+            "Opéré avec quel gaz : \n" +
+            "Contact sur place lors de la visite (nom, prénom) :";
         } else if (abc === "C") {
           frm.text1.value =
-            "Nb de lignes nettoyées et passées à l'air par brasserie : \nNb de fobs nettoyés/brossés : \nAccoupleur accroché ou déposé dans un contenant : \nFermer la bonbonne de gaz : \nVider et rincer la bouteille pour les fobs : \nÉquipement dans un bâtiment chauffé : \n\nVérification de l'état du CWB : \nCuve vidée et nettoyée : \nTempérature du thermostat : \nDensité du glycol : \nSouffler radiateur : \nÉtat de l'isolation de pompe/circulation : \nÉtat du dumper coupling kit : \nÉtat de la pompe/moteur :";
+            "Nb de lignes nettoyées et passées à l'air par brasserie : \nNb de fobs nettoyés/brossés : \nAccoupleur accroché ou déposé dans un contenant : \nFermer la bonbonne de gaz : \nVider et rincer la bouteille pour les fobs : \nÉquipement dans un bâtiment chauffé : \n\nVérification de l'état du CWB : \nCuve vidée et nettoyée : \nTempérature du thermostat : \nDensité du glycol : \nSouffler radiateur : \nÉtat de l'isolation de pompe/circulation : \nÉtat du dumper coupling kit : \nÉtat de la pompe/moteur : \nContact sur place lors de la visite (nom, prénom) :";
         } else if (abc === "J") {
           frm.text1.value =
-            "Nb de lignes nettoyées et passées à l'air par brasseur : \nNb de fobs nettoyés/brossés : \nTest de fuite de gaz : \n\nVérification de l'état du CWB : \nCuve vidée et nettoyée : \nConcentration de glycol avant (°C): \nConcentration de glycol après (°C): \nTemp. du bassin : \nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \nQté. de glycol utilisé en Litres : \nQté. Dumper coupling utilisé : \nIsolation de pompe en bon état ? : \nPompe en bon état ? : \nMoteur en bon état ? : \nAutre : \nBrasserie et marque de bière : \nNuméro de série : \nModèle de bassin : \nAvez-vous apposé l'autocollant de maintenance sur le bassin ? \n\nVérification de l'état du BACK BAR : \nTempérature dans le frigo : \nPompe de circulation fonctionnelle : \nEau dans le réservoir : \nSouffler radiateur : \nNuméro de série : \nNuméro de modèle :";
+            "Nb de lignes nettoyées et passées à l'air par brasseur : \nNb de fobs nettoyés/brossés : \nTest de fuite de gaz : \n\nVérification de l'état du CWB : \nCuve vidée et nettoyée : \nConcentration de glycol avant (°C): \nConcentration de glycol après (°C): \nTemp. du bassin : \nRadiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \nQté. de glycol utilisé en Litres : \nQté. Dumper coupling utilisé : \nIsolation de pompe en bon état ? : \nPompe en bon état ? : \nMoteur en bon état ? : \nAutre : \nBrasserie et marque de bière : \nNuméro de série : \nModèle de bassin : \nAvez-vous apposé l'autocollant de maintenance sur le bassin ? \n\nVérification de l'état du BACK BAR : \nTempérature dans le frigo : \nPompe de circulation fonctionnelle : \nEau dans le réservoir : \nSouffler radiateur : \nNuméro de série : \nNuméro de modèle : \nContact sur place lors de la visite (nom, prénom) :";
         } else if (abc === "F") {
           frm.text1.value =
             "Différence avec le RDV : \n" +
@@ -110,7 +109,8 @@
             "Frais de stationnement : \n" +
             "Autres frais (divers) : \n" +
             "Sortes de bières : \n\n" +
-            "Travaux restant à faire : \n";
+            "Travaux restant à faire : \n" +
+            "Contact sur place lors de la visite (nom, prénom) :";
         } else if (abc === "H") {
           frm.text1.value =
             "MAINTENANCE COMPLETE (Mains et bassin)\n\n" +
@@ -137,7 +137,8 @@
             "Qté de tuyau de 5/16'' utilisé : \n" +
             "Brasserie et marque de bière : \n" +
             "Qté de fob nettoyé : \n" +
-            "Autre :";
+            "Autre : \n" +
+            "Contact sur place lors de la visite (nom, prénom) :";
         } else if (abc === "B") {
           frm.text1.value =
             "Maintenance de bassin \n" +
@@ -155,7 +156,8 @@
             "Moteur en bon état ? : \n" +
             "Avez-vous apposé l'autocollant de maintenance sur le bassin ? : \n" +
             "Autre : \n" +
-            "Sortes de bières :";
+            "Sortes de bières : \n" +
+            "Contact sur place lors de la visite (nom, prénom) :";
         } else if (abc === "I") {
           frm.text1.value =
             "Maintenance de backbar \n" +
@@ -166,7 +168,8 @@
             "Radiateur soufflé au CO2 ? (obligatoire à chq maintenance) : \n" +
             "État du drain de l'évaporateur : \n" +
             "Brasserie et marque de bière : \n" +
-            "Autre :";
+            "Autre : \n" +
+            "Contact sur place lors de la visite (nom, prénom) :";
         } else if (abc === "L") {
           frm.text1.value =
             "Maintenance de liqueur \n" +
@@ -177,7 +180,8 @@
             "Vérification du carbonateur : \n" +
             "Sortes de liqueurs : \n" +
             "Photo du rack à liqueur, gun et support : \n" +
-            "Autres pièces utilisées :";
+            "Autres pièces utilisées : \n" +
+            "Contact sur place lors de la visite (nom, prénom) :";
         } else if (abc === "O") {
           frm.text1.value =
             "Template backbar ouverture :\n\n" +
@@ -190,7 +194,8 @@
             "Nettoyer le radiateur : Oui / non\n" +
             "Température de backbar : \n" +
             "# série Backbar et modèle : \n" +
-            "Pièces utilisées : ";
+            "Pièces utilisées : \n" +
+            "Contact sur place lors de la visite (nom, prénom) :";
         } else if (abc === "V") {
           frm.text1.value =
             "TEMPLATE VISITE CHAMBRE FROIDE :\n" +
@@ -256,8 +261,6 @@
             "Autres frais (divers) : \n\n" +
             "Contact sur place lors de l'installation : \n\n" +
             "JOINDRE PHOTO DU CONTRÔLEUR, DES CAPTEURS, DES ALARMES, DU TRANSFO SÉCURISÉ, BONBONNE DE GAZ ET DU DOCUMENT DE GARANTIE SIGNÉ DANS VOTRE RDV.";
-
-        <!-- NOUVEAU BLOC -->
         } else if (abc === "P") {
           frm.text1.value =
             "Maintenance Flash cooler\n" +
